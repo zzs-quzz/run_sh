@@ -22,7 +22,7 @@ catkin_make
 ```
 2. 运行测试程序
 ```
-./devel/lib/record_logs/run_sh
+./devel/lib//run_sh/run_sh
 ```
 ## 3. 作者
 - [zzsquzz](https://github.com/zzs-quzz)
