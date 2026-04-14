@@ -10,12 +10,12 @@
 ```shell
 git clone https://github.com/zzs-quzz/run_sh.git
 ```
-### 2.1 安装依赖
+### 2.2 安装依赖
 安装jsoncpp库
 ```
 sudo apt install libjsoncpp-dev
 ```
-### 2.2 运行
+### 2.3 运行
 1. 构建功能包
 ```
 catkin_make
