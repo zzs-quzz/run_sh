@@ -41,7 +41,7 @@ bool parse_result(std::string result)
     if (root.isMember("message") && !root["message"].isNull())
     {
         std::string message = root["message"].asString();
-        printf("message:%s", message.c_str());
+        printf("message:%s\n", message.c_str());
     }
     return true;
 }
