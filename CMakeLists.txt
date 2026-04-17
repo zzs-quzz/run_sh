@@ -102,10 +102,10 @@ pkg_check_modules(JSONCPP REQUIRED jsoncpp)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES run_sh
+INCLUDE_DIRS include
+LIBRARIES ${PROJECT_NAME}
 #  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
+DEPENDS JSONCPP
 )
 
 ###########
@@ -121,9 +121,13 @@ ${JSONCPP_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/run_sh.cpp
-# )
+add_library(${PROJECT_NAME}
+  src/run_sh.cpp
+)
+
+target_link_libraries(${PROJECT_NAME}
+  ${JSONCPP_LIBRARIES}
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -133,7 +137,7 @@ ${JSONCPP_INCLUDE_DIRS}
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/ceshi.cpp src/run_sh.cpp)
+add_executable(${PROJECT_NAME}_ceshi src/ceshi.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,8 +154,8 @@ add_executable(${PROJECT_NAME} src/ceshi.cpp src/run_sh.cpp)
 #   ${catkin_LIBRARIES}
 # )
 
-target_link_libraries(${PROJECT_NAME}
-  ${JSONCPP_LIBRARIES}
+target_link_libraries(${PROJECT_NAME}_ceshi
+  ${PROJECT_NAME}
 )
 
 #############
