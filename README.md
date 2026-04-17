@@ -22,7 +22,9 @@ catkin_make
 ```
 2. 运行测试程序
 ```
-./devel/lib//run_sh/run_sh
+./devel/lib//run_sh/run_sh_ceshi
 ```
-## 3. 作者
+## 3. 其他功能包使用
+- 修改CMakeLists.txt：注释add_executable和target_link_libraries
+## 4. 作者
 - [zzsquzz](https://github.com/zzs-quzz)
