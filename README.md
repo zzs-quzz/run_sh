@@ -22,7 +22,7 @@ catkin_make
 ```
 2. 运行测试程序
 ```
-./devel/lib//run_sh/run_sh_ceshi
+./devel/lib/run_sh/run_sh_ceshi
 ```
 ## 3. 其他功能包使用
 - 修改CMakeLists.txt：注释140行add_executable和157行target_link_libraries
